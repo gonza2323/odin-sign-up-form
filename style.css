@@ -24,6 +24,11 @@ body {
     min-height: 100vh;
 }
 
+a, a:visited {
+    text-decoration: none;
+    color: white;
+}
+
 body {
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
@@ -66,8 +71,8 @@ body {
     text-align: center;
 }
 
-.img-credits > a:visited {
-    color: inherit;
+.img-credits > a {
+    text-decoration: underline;
 }
 
 
@@ -133,14 +138,29 @@ input {
     padding: 8px 8px;
 }
 
+input[type="password"]:user-invalid {
+    --border-color: rgb(255, 71, 71);
+    outline: 1px solid var(--border-color);
+}
+
+input:focus {
+    --border-color: rgb(69, 69, 255) !important;
+    outline: 1px solid var(--border-color) !important;
+}
+
 button {
     background-color: var(--button-color);
     color: white;
     font-weight: bold;
+    font-size: 1rem;
     border: none;
     padding: 16px 48px;
     border-radius: 8px;
     margin-bottom: 36px;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 form,
@@ -152,6 +172,12 @@ button {
 .login-link,
 .login-link:visited {
     color: var(--button-color);
-    text-decoration: none;
     font-weight: bold;
+}
+
+button:hover,
+button:focus-visible,
+a:hover,
+a:focus-visible {
+    text-decoration: underline;
 }
