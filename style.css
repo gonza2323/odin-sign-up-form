@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'norsebold';
     src: url('./fonts/norse-bold-webfont.woff2') format('woff2'),
@@ -5,3 +6,73 @@
     font-weight: normal;
     font-style: normal;
 }
+
+:root {
+    --header-size: 112px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+}
+
+.logo-section {
+    flex: 1 1 30%;
+
+    background-image: url(./img/background-img.jpg);
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-container {
+    margin-top: 150px;
+    background-color: rgba(0, 0, 0, 0.432);
+    padding: 12px 0;
+
+    font-family: norsebold;
+    color: rgb(255, 255, 255);
+    font-size: var(--header-size);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    height: calc(var(--header-size) * 1.25);
+}
+
+.img-credits {
+    color: rgb(224, 224, 224);
+    height: 20px;
+    margin-top: auto;
+    margin-bottom: 16px;
+    width: 100%;
+    text-align: center;
+}
+
+.img-credits > a:visited {
+    color: inherit;
+}
+
+
+/* Right section: form */
+
+.content-section {
+    flex: 1 1 60%;
+
+    display: flex;
+    flex-direction: column;
+}
+
